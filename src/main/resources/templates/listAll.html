@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List All</title>
+
+</head>
+<body>
+<div th:replace="base :: navlinks"></div>
+<h1>List Of All Employees</h1>
+
+<div th:each="employee : ${employee}">
+    <p> ID [[${employee.id}]]</p>
+    <p th:inline="text"> Name: [[${employee.firstName}]] [[${employee.lastName}]]</p>
+    <p> Start Date [[${employee.startDate}]]</p>
+</div>
+
+
+
+
+
+
+<div th:replace="base ::footer"></div>
+</body>
+</html>

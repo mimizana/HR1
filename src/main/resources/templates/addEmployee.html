@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee </title>
+
+</head>
+<body>
+<div th:replace="base :: navlinks"></div>
+<h2> Add Employee page </h2>
+
+<h1>New Employee Information</h1>
+<form action="#" th:action="@{/listAll}" th:object="${employee}" method ="post">
+    <div>Employee ID: <input type="number" th:field="*{id}"></div><br></div>
+    <div>First Name: <input type="text" th:field="*{firstName}"></div><br></div>
+    <div>Last Name: <input type="text" th:field="*{lastName}"></div><br></div>
+    <div>Start Date: <input type="text" th:field="*{startDate}"></div><br></div>
+    <input type="submit" value="Submit" />
+
+</form>
+<div th:replace="base ::footer"></div>
+
+</body>
+</html>
